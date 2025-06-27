@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krishna - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #dfff40;
+      width: 100%;
+      height: 100%;
+    }
+
+    .header {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+    }
+
+    .header .logo a {
+      color: #1b4332;
+      font-family: 'Qwitcher Grypen', cursive;
+      text-decoration: none;
+      font-weight: bolder;
+      font-size: 60px;
+    }
+
+    .header .nav ul {
+      display: flex;
+      gap: 50px;
+    }
+
+    .header .nav ul li {
+      list-style: none;
+    }
+
+    .header .nav ul li a {
+      position: relative;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .header .nav ul li a::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 0;
+      bottom: -2px;
+      left: 0;
+      background-color: #1d4ed8;
+      transition: width 0.3s ease;
+    }
+
+    .header .nav ul li a:hover::after {
+      width: 70%;
+    }
+
+    .header .nav ul li a:hover {
+      transform: scale(1.1);
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: 50px auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .head-para {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .head-para h1 {
+      font-size: 33px;
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .head-para span {
+      color: #1d4ed8;
+    }
+    .head-para p {
+      font-size: 16px;
+      margin-top: 10px;
+      max-width: 500px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .hero-img {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero-img img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+    .hero-img img:hover{
+        transform: scale(0.90);
+    }
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .header {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    .container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+    margin-bottom: 1rem;
+    }
+    .container h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    .card-container{
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+    .card{
+        background-color: #27272a;
+        padding: 30px;
+        border: 2px solid transparent;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        color: #ccc;
+    }
+    .card h4{
+        font-size: 30px;
+    }
+    .card p{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .card:hover{
+        border: 2px solid white;
+    }
+    .card .btn{
+        width: 100%;
+        padding: 15px 20px;
+        border: 2px solid #ccc;
+        color: #0f172a;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 15px;
+        background-color: #dfff40;
+        transition: all 0.3s ease;
+    }
+    .card .btn:hover{
+        transform: scale(0.90);
+    }
+    .copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #0f172a;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    }
+    @media(width < 900px){
+    .nav{
+        display: none;
+    }
+    .card-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(width < 600px){
+    .card-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+  </style>
+</head>
+<body>
+  <section class="header">
+    <div class="logo">
+      <a href="#">Krishna</a>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="head-para">
+      <h1>Hello, Coders</h1>
+      <h1>I am <span id="typed-text"></span></h1>
+      <p>
+        I craft engaging digital experiences through strategic marketing, clean and creative design, and responsive web development. With a passion for visuals and performance, I help brands grow and stand out in the digital world.
+      </p>
+    </div>
+    <div class="hero-img">
+      <img src="IMG_20250605_145528_653.webp" alt="Krishna Image">
+    </div>
+  </section>
+  <section class="container">
+    <h1>Offered Services</h1>
+    <div class="card-container">
+        <div class="card">
+                <span><i class="ri-palette-fill"></i></i></span>
+                <h4>Graphic Design</h4>
+                <p>
+                    I provide professional Graphic Design Services, including logo design, branding, 
+                    UI/UX, social media creatives, print materials, and motion graphics. My designs are 
+                    crafted with creativity and precision to enhance brand identity and engagement. 
+                    Let us create stunning visuals that captivate, communicate, and leave a lasting 
+                    impression!
+                </p>
+                <button class="btn">Join</button>
+        </div>
+        <div class="card">
+                <span><i class="ri-palette-fill"></i></i></span>
+                <h4>Web Development</h4>
+                <p>
+                    I offer professional Web Development Services, including frontend, backend, 
+                    full-stack development, UI/UX design, e-commerce, and responsive websites. My goal 
+                    is to build fast, secure, and user-friendly websites that enhance digital presence. 
+                    Let’s create a powerful online platform that engages users and drives business growth!
+                </p>
+                <button class="btn">Join</button>
+        </div>
+        <div class="card">
+                <span><i class="ri-palette-fill"></i></i></span>
+                <h4>Digital Marketing</h4>
+                <p>
+                     I provide expert Digital Marketing Services, including social media marketing, 
+                     content marketing, email campaigns, and branding. Our strategies enhance online 
+                     visibility, drive engagement, and boost conversions. Let’s create result-driven 
+                     marketing campaigns to grow your brand and reach the right audience effectively!
+                </p>
+                <button class="btn">Join</button>
+        </div>
+    </div>
+  </section>
+  <div class="copyright">
+        Copyright © 2025 Krishna Jha. All Right Reserved.
+  </div>
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  var typed = new Typed("#typed-text", {
+    strings: ["Krishna Jha", "a Digital Marketer", "a Graphic Designer", "a Frontend Web Developer"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    backDelay: 1000,
+    loop: true,
+    showCursor: true,
+    cursorChar: "|"
+  });
+</script>
+</body>
+</html>
